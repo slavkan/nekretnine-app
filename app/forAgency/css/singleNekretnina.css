@@ -1,0 +1,46 @@
+.nekretnina-view-container{
+  width: 100;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.single-nekretnina-card{
+  width: 90%;
+}
+
+
+.carousel-inner {
+  height: 0;
+  padding-bottom: 50%;
+}
+
+.carousel-item {
+  position: absolute !important;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.carousel-item img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.single-nekretnina-card{
+  margin: auto;
+}
+
+.top-card-flex{
+  height: 150px;
+}
+
+.profile-pic-nekretnina{
+  height: 50px;
+  width: 50px;
+}
+
+.btn-style-custom:disabled{
+  display: none;
+}

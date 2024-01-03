@@ -1,0 +1,54 @@
+.image-upload-button{
+  height: 30px;
+}
+
+.textarea-height{
+  height: 300px;
+}
+
+.delete-btn-custom{
+  border: 1px black solid;
+  height: 30px;
+  position: relative;
+}
+
+.delete-btn-custom img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.delete-btn-custom:hover{
+  border: 1px red solid !important;
+  background-color: azure !important;
+  display: inline;
+}
+
+.delete-flex-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.delete-grid-container {
+  width: 40%;
+  display: grid;
+  grid-template-columns: 30px 1fr 100px;
+  gap: 10px;
+  grid-auto-rows: minmax(0, auto);
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 991px){
+  .delete-flex-container{
+    flex-direction: column;
+  }
+  .delete-grid-container {
+    width: 100%;
+  }
+  .mini-top-margin{
+    margin-top: 10px;
+  }
+}

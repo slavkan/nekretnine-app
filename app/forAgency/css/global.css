@@ -1,0 +1,99 @@
+.custom-navbar{
+  background-color: #bfbcb3;
+}
+
+.main-page-flex {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  transition: all 0.3s;
+}
+
+.sidebar-container {
+  width: 20%;
+  background-color:#F1F4F5;
+  overflow-x: hidden;
+  transition: all 0.3s;
+  display: flex;
+  flex-direction: column;
+  padding-top: 50px;
+}
+
+.main-page-container {
+  width: 85%;
+  transition: all 0.3s;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  row-gap: 50px;
+  margin-top: 50px;
+}
+
+.sidebar-shrink {
+  width: 40px !important;
+}
+
+.main-page-container {
+  width: calc(100% - 40px) !important;
+  transition: width 0.3s ease;
+}
+
+.remove-btn-style {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-size: inherit;
+  font-family: inherit;
+  color: inherit;
+  cursor: pointer;
+  outline: none;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.remove-btn-style img {
+  height: 30px;
+}
+
+.rotate-image {
+  transform: rotate(180deg);
+}
+
+.custom-card-style{
+  width: 60%;
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover; 
+}
+
+.card-body-top{
+  padding: 1rem 1rem;
+  height: 100px;
+}
+
+.card-body-bottom{
+  height: 65px;
+}
+
+.card {
+  /* height: 500px; */
+}
+
+.form-width {
+  width: 90%;
+  margin: 0 auto;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease, max-height 0.3s ease, margin 0.3s ease;
+
+}
+
+.hide-form{
+  opacity: 0;
+  visibility: hidden;
+}
