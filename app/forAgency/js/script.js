@@ -7,7 +7,6 @@ const yourId = document.getElementById('your_id')
 const chatId = document.getElementById('chat_id')
 
 socket.on('chat-message', data => {
-  // console.log(data.chat_id);
   appendMessage(data.message, data.senderName, 0, data.chat_id);
 })
 
@@ -27,8 +26,6 @@ messageForm.addEventListener('submit', e => {
 })
 
 function appendMessage(message, senderName, isMsgMine, chat_id) {
-  // const chatId = document.getElementById('chat_id');
-  // console.log(chat_id + " === " + chatId.value);
   if(chat_id === chatId.value || isMsgMine === 1){
     const currentDate = new Date();
     console.log(currentDate);
@@ -68,5 +65,5 @@ function appendMessage(message, senderName, isMsgMine, chat_id) {
     messageElement.appendChild(dateTimeRow);
 
     messageContainer.prepend(messageElement)
-}
+  }
 }
