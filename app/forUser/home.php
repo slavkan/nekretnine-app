@@ -180,47 +180,47 @@
       $filterQuery = " WHERE ";
 
       if(!empty($naziv)){
-        $filterQuery .= "naziv LIKE '%" . $naziv . "%' AND ";
+        $filterQuery .= "n.naziv LIKE '%" . $naziv . "%' AND ";
       }
       if(!empty($cijenaMin) || !empty($cijenaMax)){
         if(!empty($cijenaMin) && !empty($cijenaMax)){
-          $filterQuery .= "cijena BETWEEN " . $cijenaMin . " AND " . $cijenaMax . " AND " ;
+          $filterQuery .= "n.cijena BETWEEN " . $cijenaMin . " AND " . $cijenaMax . " AND " ;
         }
         else if(empty($cijenaMin)){
-          $filterQuery .= "cijena < " . $cijenaMax . " AND ";
+          $filterQuery .= "n.cijena < " . $cijenaMax . " AND ";
         }
         else if(empty($cijenaMax)){
-          $filterQuery .= "cijena > " . $cijenaMin . " AND ";
+          $filterQuery .= "n.cijena > " . $cijenaMin . " AND ";
         }
       }
       if($zupanija !== "Odaberite županiju"){
-        $filterQuery .= "lokacija_zupanija ='" . $zupanija . "' AND ";
+        $filterQuery .= "n.lokacija_zupanija ='" . $zupanija . "' AND ";
       }
       if($grad !== "Odaberite grad"){
-        $filterQuery .= "lokacija_grad ='" . $grad . "' AND ";
+        $filterQuery .= "n.lokacija_grad ='" . $grad . "' AND ";
       }
       if($sprat !== "Odaberite"){
-        $filterQuery .= "sprat ='" . $sprat . "' AND ";
+        $filterQuery .= "n.sprat ='" . $sprat . "' AND ";
       }
       if($broj_soba !== "Odaberite"){
-        $filterQuery .= "broj_soba ='" . $broj_soba . "' AND ";
+        $filterQuery .= "n.broj_soba ='" . $broj_soba . "' AND ";
       }
       if(!empty($broj_kvadrataMin) || !empty($broj_kvadrataMax)){
         if(!empty($broj_kvadrataMin) && !empty($broj_kvadrataMax)){
-          $filterQuery .= "broj_kvadrata BETWEEN " . $broj_kvadrataMin . " AND " . $broj_kvadrataMax . " AND " ;
+          $filterQuery .= "n.broj_kvadrata BETWEEN " . $broj_kvadrataMin . " AND " . $broj_kvadrataMax . " AND " ;
         }
         else if(empty($broj_kvadrataMin)){
-          $filterQuery .= "broj_kvadrata < " . $broj_kvadrataMax . " AND ";
+          $filterQuery .= "n.broj_kvadrata < " . $broj_kvadrataMax . " AND ";
         }
         else if(empty($broj_kvadrataMax)){
-          $filterQuery .= "broj_kvadrata > " . $broj_kvadrataMin . " AND ";
+          $filterQuery .= "n.broj_kvadrata > " . $broj_kvadrataMin . " AND ";
         }
       }
       if($stanje !== "Odaberite"){
-        $filterQuery .= "stanje ='" . $stanje . "' AND ";
+        $filterQuery .= "n.stanje ='" . $stanje . "' AND ";
       }
       
-      $filterQuery = substr($filterQuery, 0, -6);
+      $filterQuery = substr($filterQuery, 0, -5);
       $query .= $filterQuery;
     }
     $query_run = mysqli_query($conn, $query);
