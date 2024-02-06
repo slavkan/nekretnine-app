@@ -78,6 +78,11 @@
 
 .card-body-bottom{
   height: 65px;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
 }
 
 .card {
@@ -96,4 +101,30 @@
 .hide-form{
   opacity: 0;
   visibility: hidden;
+}
+
+@media (width < 1050px){
+  .main-page-container {
+    grid-template-columns: repeat(2, 1fr);
+
+  }
+}
+
+@media (width < 900px){
+  .sidebar-container{
+    width: 40%;
+  }
+}
+
+@media (width < 750px){
+  .main-page-container {
+    grid-template-columns: repeat(1, 1fr);
+
+  }
+}
+
+@media (width < 550px){
+  .sidebar-container{
+    width: 100%;
+  }
 }
